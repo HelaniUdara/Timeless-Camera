@@ -3,6 +3,7 @@
 <head>
     <title>Timeless Camera Website Template</title>
     <link rel="stylesheet" href="style.css">   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
    
 </head>
@@ -12,8 +13,47 @@
     <div class="banner-text">
       <h1>Timeless Camera Studio</h1>
       <p>We expose your true beauty by capturing your souls</p>
+      <div class="banner-btn">
+        <a href="#"><span></span>Find Out</a>
+        <a href="#"><span></span>Read More</a>
+      </div>
     </div>
   </section>
+
+  <div id="sideNav">
+    <nav>
+      <ul>
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">FEATURES</a></li>
+        <li><a href="#">SERVICES</a></li>
+        <li><a href="#">TESTIMONIALS</a></li>
+        <li><a href="#">MEET US</a></li>
+      </ul>
+    </nav>
+  </div> 
   
+  <div id="menubtn">
+    <img src="pp/menu.png " id="menu">
+
+  </div>
+
+  <script>
+    var menubtn = document.getElementById("menubtn");
+    var sideNav = document.getElementById("sideNav");
+    var menu = document.getElementById("menu");
+
+    sideNav.style.right = "-250px";
+
+    menubtn.onclick = function(){
+        if(sideNav.style.right == "-250px"){
+          sideNav.style.right = "0";
+          menu.src = "pp/close1.png"
+        }
+        else{
+          sideNav.style.right = "-250px";
+          menu.src = "pp/menu.png"
+        }
+    }
+  </script>
 </body>
 </html>
